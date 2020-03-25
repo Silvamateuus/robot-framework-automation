@@ -20,6 +20,7 @@ Cadastrar novo jogo
     #Click Element    /html/body/div/div/form/div[4]/input
     Click Element    xpath://input[@value='Criar Produto']
 
+    # Validação
     Element Should Contain      css:div[role=alert]    Produto cadastrado com sucesso.
     Element Should Contain      css:table tbody        Mario
 
