@@ -1,0 +1,14 @@
+pkg
+doc
+tmp
+coverage
+.bundle
+.rvmrc
+.yardoc/
+.rvmrc
+.cucumber.rerun
+gemfiles/*.lock
+Gemfile.lock
+spec/examples.txt
+.idea
+.ruby-version

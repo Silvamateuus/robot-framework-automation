@@ -1,0 +1,15 @@
+current directory: /home/mateus/Desktop/mateus/github/roboweek-1a-edicao/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby2.5 -r ./siteconf20200324-11048-1vvcv80.rb extconf.rb
+creating Makefile
+
+current directory: /home/mateus/Desktop/mateus/github/roboweek-1a-edicao/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/mateus/Desktop/mateus/github/roboweek-1a-edicao/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/mateus/Desktop/mateus/github/roboweek-1a-edicao/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200324-11048-1gucylp/skiptrace/internal
