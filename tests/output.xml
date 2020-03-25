@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.5 on linux)" generated="20200325 10:56:35.032" rpa="false">
+<suite id="s1" name="Cadastro" source="/home/mateus/Desktop/mateus/github/roboweek-qaninja/tests/cadastro.robot">
+<test id="s1-t1" name="Cadastrar novo jogo">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200325 10:56:36.385" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20200325 10:56:36.384" endtime="20200325 10:56:41.407"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200325 10:56:41.408" endtime="20200325 10:56:41.417"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/produtos/new</arg>
+</arguments>
+<msg timestamp="20200325 10:56:41.418" level="INFO">Clicking link '/produtos/new'.</msg>
+<status status="PASS" starttime="20200325 10:56:41.418" endtime="20200325 10:56:41.846"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:produto_nome</arg>
+<arg>Mario Word</arg>
+</arguments>
+<msg timestamp="20200325 10:56:41.847" level="INFO">Typing text 'Mario Word' into text field 'id:produto_nome'.</msg>
+<status status="PASS" starttime="20200325 10:56:41.846" endtime="20200325 10:56:42.127"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:produto_descricao</arg>
+<arg>Jogo Nintendo</arg>
+</arguments>
+<msg timestamp="20200325 10:56:42.127" level="INFO">Typing text 'Jogo Nintendo' into text field 'id:produto_descricao'.</msg>
+<status status="PASS" starttime="20200325 10:56:42.127" endtime="20200325 10:56:42.242"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:produto_preco</arg>
+<arg>30.00</arg>
+</arguments>
+<msg timestamp="20200325 10:56:42.242" level="INFO">Typing text '30.00' into text field 'id:produto_preco'.</msg>
+<status status="PASS" starttime="20200325 10:56:42.242" endtime="20200325 10:56:42.318"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:produto_quantidade</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200325 10:56:42.318" level="INFO">Typing text '2' into text field 'id:produto_quantidade'.</msg>
+<status status="PASS" starttime="20200325 10:56:42.318" endtime="20200325 10:56:42.405"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value='Criar Produto']</arg>
+</arguments>
+<msg timestamp="20200325 10:56:42.405" level="INFO">Clicking element 'xpath://input[@value='Criar Produto']'.</msg>
+<status status="PASS" starttime="20200325 10:56:42.405" endtime="20200325 10:56:45.677"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>css:div[role=alert]</arg>
+<arg>Produto cadastrado com sucesso.</arg>
+</arguments>
+<msg timestamp="20200325 10:56:45.723" level="INFO">Element 'css:div[role=alert]' contains text 'Produto cadastrado com sucesso.'.</msg>
+<status status="PASS" starttime="20200325 10:56:45.677" endtime="20200325 10:56:45.723"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>css:table tbody</arg>
+<arg>Mario</arg>
+</arguments>
+<msg timestamp="20200325 10:56:45.790" level="INFO">Element 'css:table tbody' contains text 'Mario'.</msg>
+<status status="PASS" starttime="20200325 10:56:45.724" endtime="20200325 10:56:45.790"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200325 10:56:45.953" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200325 10:56:45.790" endtime="20200325 10:56:45.954"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200325 10:56:45.954" endtime="20200325 10:56:46.249"></status>
+</kw>
+<status status="PASS" starttime="20200325 10:56:36.384" endtime="20200325 10:56:46.249" critical="yes"></status>
+</test>
+<doc>Cadastros de jogos</doc>
+<status status="PASS" starttime="20200325 10:56:35.033" endtime="20200325 10:56:46.250"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
