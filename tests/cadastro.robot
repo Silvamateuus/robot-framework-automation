@@ -5,13 +5,12 @@ Documentation   Cadastros de jogos
 # Importando biblioteca
 Library     SeleniumLibrary
 
-
 *** Test Cases ***
 # Nome do cenári
 Cadastrar novo jogo
     # Abre o browser
     open Browser                    http://localhost:3000/     chrome
-    # Tempo de espera para realizar as ações
+    # Timeout implicito - Tempo de espera para realizar as ações, até 5s.
     set Selenium Implicit Wait      5
     # Clicando no botão "Novo"
     Click Link                      /produtos/new
