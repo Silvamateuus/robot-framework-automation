@@ -1,3 +1,7 @@
 # Roboweek QA Ninja 
-  - RobotFramework
+
+Testando aplicação de vendas de games na linguagem Ruby utilizando roobotframework para os testes.
+
+
+
 
