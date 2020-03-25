@@ -1,0 +1,4 @@
+* linguist-vendored
+*.HTML linguist-vendored=false
+
+*.ruby linguist-detectable=true
