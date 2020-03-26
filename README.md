@@ -12,6 +12,7 @@ Testando aplicação de vendas de games na linguagem Ruby utilizando roobotframe
 
 ### Rodar?
     -$ bundle exec rails s
+    -$ rails s
 
 
 #### Outros Comandos 
