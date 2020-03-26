@@ -17,6 +17,6 @@ Testando aplicação de vendas de games na linguagem Ruby utilizando roobotframe
     -$ rails s
 
 
-#### Outros Comandos para o auxilio:
+#### Outros comandos para o auxilio:
     Para executar o teste e salvar os logs do robotframework na pasta log da estrutura do ruby.
             - $ robot -d ./log  testes/cadastro.robot
