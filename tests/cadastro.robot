@@ -37,10 +37,12 @@ Nome deve ser obrigatório
 
 
 preço deve ser obrigatório
+    # Para rodar somente o cenario bugado (roobot -d ./log -i bug <feature>)
+    [tags]  bug
     Dado que acesso o portal de cadastro de jogos
     Quando eu faço o cadastro de um novo jogo
     ...     pitfal      aventura na selva       ${EMPTY}       10
-    Então devo ver a mensagem de alerta "Preco não pode ficar em branco"
+    Então devo ver a mensagem de alerta "Preço não pode ficar em branco"
 
 
 Quantidade deve ser obrigatório
