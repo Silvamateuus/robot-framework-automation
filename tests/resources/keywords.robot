@@ -5,24 +5,26 @@
 
 
 *** Settings ***
-# Importando biblioteca
+# Importando biblioteca do SeleniumLibrary
 Library     SeleniumLibrary
 
 
 *** Variables ***
+# Caminho da pagina principal
 ${BASE_URL}     http://localhost:3000
 
 
 *** Keywords ***
+
 ### Ganchos
+# Iniciar a sessão abrincdo o browser chrome
 Inicia Sessao
     # Abre o browser
     Open Browser                    ${BASE_URL}     chrome
     # Timeout implicito - Tempo de espera para realizar as ações, até 5s.
     Set Selenium Implicit Wait      5
 
-
-### Steps
+# Finalizando a sessão capturando um print e fechando o browser.
 Encerra Sessao
     # Tira um print e salva no projeto
     Capture Page Screenshot
@@ -30,6 +32,8 @@ Encerra Sessao
     Close Browser
 
 
+
+### Steps
 Dado que acesso o portal de cadastro de jogos
     # Goto: Direciona para pagina de cadastro
     Go To            ${BASE_URL}/produtos/new
