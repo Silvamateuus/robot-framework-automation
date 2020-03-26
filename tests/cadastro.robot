@@ -18,6 +18,20 @@ Cadastrar novo jogo
     Então vejo a mesagem de sucesso "Produto cadastrado com sucesso."
     E vejo este novo jogo na lista
 
+Nome deve ser obrigatório
+    Dado que acesso o portal de jogos
+    Quando eu cadastro um produto sem nome
+    Então devo ver a mensagem de alerta "Nome não pode ficar em branco"
+
+preço deve ser obrigatório
+    Dado que acesso o portal de jogos
+    Quando eu cadastro um produto sempreço
+    Então devo ver a mensagem de alerta "preço não pode ficar em branco"
+
+Quantidade deve ser obrigatório
+    Dado que acesso o portal de jogos
+    Quando eu cadastro um produto sem quantidade
+    Então devo ver a mensagem de alerta "quantidade não pode ficar em branco"
 
 
 # Desenvolvimentos dos testes (Keywords)
