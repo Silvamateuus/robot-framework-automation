@@ -35,7 +35,6 @@ Encerra Sessao
     Close Browser
 
 
-
 ### Steps
 Dado que acesso o portal de cadastro de jogos
     # Goto: Direciona para pagina de cadastro
@@ -51,7 +50,9 @@ Quando eu faço o cadastro de um novo jogo
     Input Text       ${CAMPO_PRECO}           ${preco}
     Input Text       ${CAMPO_QTD}             ${qtd}
     Click Element    ${BTN_CRIAR_PROD}
-
+    
+    # Deixar esta variavel global. Obs: Esta sendo utilizado no step (E vejo este novo jogo na lista)
+    Set Test Variable      ${nome}
 
 Então vejo a mesagem de sucesso "${mensagem_esperada}"
     # Validação da mesagem de sucesso.
@@ -60,7 +61,7 @@ Então vejo a mesagem de sucesso "${mensagem_esperada}"
 
 E vejo este novo jogo na lista
     #Validação do nome do jogo cadastrado.
-    Element Should Contain      ${LISTA_JOGOS}        Mario
+    Element Should Contain      ${LISTA_JOGOS}        ${nome}
 
 
 Então devo ver a mensagem de alerta "${mensagem_esperada}"
