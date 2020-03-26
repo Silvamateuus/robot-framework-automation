@@ -6,7 +6,7 @@
 # Documentação
 Documentation   Cadastros de jogos
 
-# Importando arquivos keywords(codigos)
+# Importando arquivo keywords(codigos)
 Resource        resources/keywords.robot
 
 # Inicio e fim da sessão

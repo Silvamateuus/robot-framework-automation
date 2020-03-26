@@ -8,6 +8,9 @@
 # Importando biblioteca do SeleniumLibrary
 Library     SeleniumLibrary
 
+# Importando arquivo elements.robots(Variaveis)
+Resource    elements.robot
+
 
 *** Variables ***
 # Caminho da pagina principal
@@ -43,24 +46,24 @@ Quando eu faço o cadastro de um novo jogo
     # Inserção dos valores nos campos inputs
     [Arguments]      ${nome}        ${desc}      ${preco}       ${qtd}
 
-    Input Text       id:produto_nome            ${nome}
-    Input Text       id:produto_descricao       ${desc}
-    Input Text       id:produto_preco           ${preco}
-    Input Text       id:produto_quantidade      ${qtd}
-    Click Element    xpath://input[@value='Criar Produto']
+    Input Text       ${CAMPO_NOME}            ${nome}
+    Input Text       ${CAMPO_DESC}            ${desc}
+    Input Text       ${CAMPO_PRECO}           ${preco}
+    Input Text       ${CAMPO_QTD}             ${qtd}
+    Click Element    ${BTN_CRIAR_PROD}
 
 
 Então vejo a mesagem de sucesso "${mensagem_esperada}"
     # Validação da mesagem de sucesso.
-    Element Should Contain      css:div[role=alert]    ${mensagem_esperada}
+    Element Should Contain      ${ALERTA_SUCESSO}    ${mensagem_esperada}
 
 
 E vejo este novo jogo na lista
     #Validação do nome do jogo cadastrado.
-    Element Should Contain      css:table tbody        Mario
+    Element Should Contain      ${LISTA_JOGOS}        Mario
 
 
 Então devo ver a mensagem de alerta "${mensagem_esperada}"
     # Validação das mensagens de erro
-    Element Should Contain   class:alert-danger     ${mensagem_esperada}
+    Element Should Contain   ${ALERTA_ERRO}     ${mensagem_esperada}
     Capture Page Screenshot
