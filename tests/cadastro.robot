@@ -21,7 +21,7 @@ ${BASE_URL}     http://localhost:3000
 # Cenarios de testes
 *** Test Cases ***
 Cadastrar novo jogo
-    # Teste mais importante da minha suite
+    # Teste de fumaça (mais importante da minha suite de teste)
     [tags]  smoke
     Dado que acesso o portal de cadastro de jogos
     Quando eu faço o cadastro de um novo jogo
