@@ -7,7 +7,8 @@
 *** Settings ***
 # Importando biblioteca do SeleniumLibrary
 Library     SeleniumLibrary
-
+Library     DatabaseLibrary
+Library     OperatingSystem
 # Importando arquivo elements.robots(Variaveis)
 Resource    elements.robot
 
@@ -35,6 +36,22 @@ Encerra Sessao
     Close Browser
 
 
+### Helpers
+
+# step faz conectar no banco
+Conecta no Banco SQlite
+    # Abrir uma conexão com banco de dados
+    Connect To Database Using Custom Params         sqlite3      database="db/development.sqlite3", isolation_level=None
+
+Deleta pelo nome
+    # Nome do produto que sera deletado
+    [Arguments]        ${nome_produto}
+    # Conectando no banco
+    Conecta no Banco SQlite
+    # Executando uma query sql que deleta o nome
+    Execute SQL String              delete from produtos where nome = '${nome_produto}'
+
+
 ### Steps
 Dado que acesso o portal de cadastro de jogos
     # Goto: Direciona para pagina de cadastro
@@ -45,6 +62,9 @@ Quando eu faço o cadastro de um novo jogo
     # Inserção dos valores nos campos inputs
     [Arguments]      ${nome}        ${desc}      ${preco}       ${qtd}
 
+    # Antes de começar o cadastaro ele vai no banco e apaga o nome
+    Deleta pelo nome        ${nome}
+    
     Input Text       ${CAMPO_NOME}            ${nome}
     Input Text       ${CAMPO_DESC}            ${desc}
     Input Text       ${CAMPO_PRECO}           ${preco}
