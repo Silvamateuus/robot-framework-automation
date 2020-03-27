@@ -13,6 +13,9 @@ gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'font-awesome-sass'
 gem 'sass-rails'
 
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
