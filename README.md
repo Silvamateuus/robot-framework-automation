@@ -2,7 +2,7 @@
 Testando aplicação de vendas de games na linguagem Ruby utilizando roobotframework para criação dos testes automatizado.
 
 
-### Instalar  dependencias:
+### Instalar dependencias:
     - $ gem install jquery-rails
     - $ sudo bundle install
 
@@ -17,6 +17,9 @@ Testando aplicação de vendas de games na linguagem Ruby utilizando roobotframe
     -$ rails s
 
 
-#### Outros comandos para o auxilio:
-    Para executar o teste e salvar os logs do robotframework na pasta log da estrutura do ruby.
+#### Comandos variados para execução dos testes:
+       Para executar o teste e salvar os logs do robotframework na pasta log da estrutura do ruby.
             - $ robot -d ./log  testes/cadastro.robot
+       Para executar uma tag especifica e salvar os logs do robotframework na pasta log da estrutura do ruby.
+            - $ robot -d ./log -i<tag> testes/cadastro.robot
+       
