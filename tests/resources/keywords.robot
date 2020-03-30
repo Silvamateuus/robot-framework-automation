@@ -5,7 +5,7 @@
 
 
 *** Settings ***
-# Importando biblioteca do SeleniumLibrary
+# Importando biblioteca do SeleniumLibrary (Para as manipulações)
 Library     SeleniumLibrary
 # Bibliotcar para acesso no banco
 Library     DatabaseLibrary
@@ -47,6 +47,8 @@ Conecta no Banco SQlite
     # Abrir uma conexão com banco de dados
     Connect To Database Using Custom Params         sqlite3      database="db/development.sqlite3", isolation_level=None
 
+
+
 # Deleta produto pelo nome.
 Deleta pelo nome
     # Nome do produto que sera deletado
@@ -77,6 +79,7 @@ E acesso o portal de cadastro de jogos
     Go To            ${BASE_URL}/produtos/new
 
 
+
 Quando eu faço o cadastro desse item
     Input Text       ${CAMPO_NOME}            ${nome}
     Input Text       ${CAMPO_DESC}            ${desc}
@@ -85,9 +88,11 @@ Quando eu faço o cadastro desse item
     Click Element    ${BTN_CRIAR_PROD}
 
 
+
 Mas este produto ja foi cadastrado
     Quando eu faço o cadastro desse item
     E acesso o portal de cadastro de jogos
+
 
 
 Então vejo a mensagem de sucesso "${mensagem_esperada}"
@@ -95,9 +100,11 @@ Então vejo a mensagem de sucesso "${mensagem_esperada}"
     Element Should Contain      ${ALERTA_SUCESSO}    ${mensagem_esperada}
 
 
+
 E vejo este novo jogo na lista
     #Validação do nome do jogo cadastrado.
     Element Should Contain      ${LISTA_JOGOS}        ${nome}
+
 
 
 Então devo ver a mensagem de alerta "${mensagem_esperada}"
