@@ -86,7 +86,8 @@ Quando eu faço o cadastro desse item
 
 
 Mas este produto ja foi cadastrado
-    Log To Console             "Daqui apouco falamos"
+    Quando eu faço o cadastro desse item
+    E acesso o portal de cadastro de jogos
 
 
 Então vejo a mensagem de sucesso "${mensagem_esperada}"
