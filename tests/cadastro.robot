@@ -32,13 +32,14 @@ Cadastrar novo jogo
     E vejo este novo jogo na lista
 
 
-# Jogo não pode ser duplicado
-#     Dado que eu tenho o seguinte produto
-#     Mas este produto ja foi cadastrado
-#     ...     Streeat Figth     Lutas           29.99         5
-#     Quando eu faço o cadastro desse item
-#     Então devo ver a mensagem de alerta "Nome não pode ficar em branco"
-
+Jogo não pode ser duplicado
+    [tags]  dup
+    Dado que eu tenho o seguinte produto
+    ...     Streeat Figth     Lutas           29.99         20
+    E acesso o portal de cadastro de jogos
+    Mas este produto ja foi cadastrado
+    Quando eu faço o cadastro desse item
+    Então devo ver a mensagem de alerta "Nome já está em uso"
 
 
 Nome deve ser obrigatório
