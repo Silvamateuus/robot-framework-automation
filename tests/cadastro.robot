@@ -23,34 +23,51 @@ ${BASE_URL}     http://localhost:3000
 Cadastrar novo jogo
     # Teste de fumaça (mais importante da minha suite de teste)
     [tags]  smoke
-    Dado que acesso o portal de cadastro de jogos
-    Quando eu faço o cadastro de um novo jogo
-    #Inserção dos valores nos campos
+    Dado que eu tenho o seguinte produto
+     #Inserção dos valores nos campos
     ...     pitfal      aventura na selva       19.99       10
-    Então vejo a mesagem de sucesso "Produto cadastrado com sucesso."
+    E acesso o portal de cadastro de jogos
+    Quando eu faço o cadastro desse item
+    Então vejo a mensagem de sucesso "Produto cadastrado com sucesso."
     E vejo este novo jogo na lista
 
 
+# Jogo não pode ser duplicado
+#     Dado que eu tenho o seguinte produto
+#     Mas este produto ja foi cadastrado
+#     ...     Streeat Figth     Lutas           29.99         5
+#     Quando eu faço o cadastro desse item
+#     Então devo ver a mensagem de alerta "Nome não pode ficar em branco"
+
+
+
 Nome deve ser obrigatório
-    Dado que acesso o portal de cadastro de jogos
-    Quando eu faço o cadastro de um novo jogo
+    Dado que eu tenho o seguinte produto
     ...     ${EMPTY}      aventura na selva       19.99       10
+    E acesso o portal de cadastro de jogos
+    Quando eu faço o cadastro desse item
     Então devo ver a mensagem de alerta "Nome não pode ficar em branco"
+
 
 
 preço deve ser obrigatório
     # Para rodar somente o cenario bugado (roobot -d ./log -i bug <feature>)
     [tags]  bug
-    Dado que acesso o portal de cadastro de jogos
-    Quando eu faço o cadastro de um novo jogo
+    Dado que eu tenho o seguinte produto
     ...     pitfal      aventura na selva       ${EMPTY}       10
+    E acesso o portal de cadastro de jogos
+    Quando eu faço o cadastro desse item
     Então devo ver a mensagem de alerta "Preço não pode ficar em branco"
 
 
+
 Quantidade deve ser obrigatório
-    Dado que acesso o portal de cadastro de jogos
-    Quando eu faço o cadastro de um novo jogo
+    Dado que eu tenho o seguinte produto
     ...     pitfal      aventura na selva       19.99       ${EMPTY}
+    E acesso o portal de cadastro de jogos
+    Quando eu faço o cadastro desse item
     Então devo ver a mensagem de alerta "Quantidade não pode ficar em branco"
+
+
 
 
