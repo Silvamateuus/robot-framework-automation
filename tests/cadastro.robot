@@ -52,12 +52,12 @@ Nome deve ser obrigatório
     ${EMPTY}    19.99       10      Nome não pode ficar em branco
 
 
+
 preço deve ser obrigatório
     # Para rodar somente o cenario bugado (roobot -d ./log -i bug <feature>)
     # [tags]  bug
     [Template]  Tentar Cadastrar
     pitfal      ${EMPTY}       10        Preço não pode ficar em branco
-
 
 
 
