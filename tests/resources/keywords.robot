@@ -22,7 +22,7 @@ ${BASE_URL}     http://localhost:3000
 
 
 *** Keywords ***
-### Ganchos
+## Ganchos
 # Iniciar a sessão abrincdo o browser chrome
 Inicia Sessao
     # Abre o browser
@@ -39,8 +39,7 @@ Encerra Sessao
 
 
 
-
-### Helpers
+## Helpers
 
 # step faz conectar no banco
 Conecta no Banco SQlite
@@ -48,6 +47,9 @@ Conecta no Banco SQlite
     Connect To Database Using Custom Params         sqlite3      database="db/development.sqlite3", isolation_level=None
 
 
+
+
+## Steps
 
 # Deleta produto pelo nome.
 Deleta pelo nome
@@ -59,7 +61,6 @@ Deleta pelo nome
     Execute SQL String              delete from produtos where nome = '${nome_produto}'
 
 
-### Steps
 
 Dado que eu tenho o seguinte produto
     [Arguments]      ${nome}        ${desc}      ${preco}       ${qtd}
@@ -73,6 +74,8 @@ Dado que eu tenho o seguinte produto
     Set Test Variable      ${desc}
     Set Test Variable      ${preco}
     Set Test Variable      ${qtd}
+
+
 
 E acesso o portal de cadastro de jogos
     # Goto: Direciona para pagina de cadastro
