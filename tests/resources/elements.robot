@@ -7,4 +7,8 @@ ${CAMPO_QTD}            id:produto_quantidade
 ${BTN_CRIAR_PROD}       xpath://input[@value='Criar Produto']
 ${ALERTA_SUCESSO}       css:div[role=alert]
 ${LISTA_JOGOS}          css:table tbody
+# ${LISTA_JOGOS}          xpath:/html/body/div/table/tbody/tr/td[1]
 ${ALERTA_ERRO}          class:alert-danger
+
+
+
